@@ -1,0 +1,7 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "InstantiateMsg",
+  "description": "Instantiate Message",
+  "type": "object",
+  "additionalProperties": false
+}

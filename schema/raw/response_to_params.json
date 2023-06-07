@@ -1,0 +1,40 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AllianceParamsResponse",
+  "type": "object",
+  "required": [
+    "params"
+  ],
+  "properties": {
+    "params": {
+      "$ref": "#/definitions/AllianceParams"
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "AllianceParams": {
+      "type": "object",
+      "required": [
+        "last_take_rate_claim_time",
+        "reward_delay_time",
+        "take_rate_claim_interval"
+      ],
+      "properties": {
+        "last_take_rate_claim_time": {
+          "type": "string"
+        },
+        "reward_delay_time": {
+          "type": "integer",
+          "format": "uint64",
+          "minimum": 0.0
+        },
+        "take_rate_claim_interval": {
+          "type": "integer",
+          "format": "uint64",
+          "minimum": 0.0
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

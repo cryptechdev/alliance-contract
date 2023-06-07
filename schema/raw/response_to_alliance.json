@@ -1,0 +1,96 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "AllianceAllianceResponse",
+  "type": "object",
+  "required": [
+    "alliance"
+  ],
+  "properties": {
+    "alliance": {
+      "$ref": "#/definitions/AllianceAsset"
+    }
+  },
+  "additionalProperties": false,
+  "definitions": {
+    "AllianceAsset": {
+      "type": "object",
+      "required": [
+        "consensus_weight",
+        "denom",
+        "last_reward_change_time",
+        "reward_change_interval",
+        "reward_change_rate",
+        "reward_start_time",
+        "reward_weight",
+        "reward_weight_range",
+        "take_rate",
+        "total_tokens",
+        "total_validator_shares"
+      ],
+      "properties": {
+        "consensus_weight": {
+          "$ref": "#/definitions/Decimal256"
+        },
+        "denom": {
+          "type": "string"
+        },
+        "is_initialized": {
+          "type": [
+            "boolean",
+            "null"
+          ]
+        },
+        "last_reward_change_time": {
+          "type": "string"
+        },
+        "reward_change_interval": {
+          "type": "integer",
+          "format": "uint64",
+          "minimum": 0.0
+        },
+        "reward_change_rate": {
+          "$ref": "#/definitions/Decimal256"
+        },
+        "reward_start_time": {
+          "type": "string"
+        },
+        "reward_weight": {
+          "$ref": "#/definitions/Decimal256"
+        },
+        "reward_weight_range": {
+          "$ref": "#/definitions/WeightRange"
+        },
+        "take_rate": {
+          "$ref": "#/definitions/Decimal256"
+        },
+        "total_tokens": {
+          "$ref": "#/definitions/Decimal256"
+        },
+        "total_validator_shares": {
+          "$ref": "#/definitions/Decimal256"
+        }
+      },
+      "additionalProperties": false
+    },
+    "Decimal256": {
+      "description": "A fixed-point decimal value with 18 fractional digits, i.e. Decimal256(1_000_000_000_000_000_000) == 1.0\n\nThe greatest possible value that can be represented is 115792089237316195423570985008687907853269984665640564039457.584007913129639935 (which is (2^256 - 1) / 10^18)",
+      "type": "string"
+    },
+    "WeightRange": {
+      "type": "object",
+      "required": [
+        "max",
+        "min"
+      ],
+      "properties": {
+        "max": {
+          "$ref": "#/definitions/Decimal256"
+        },
+        "min": {
+          "$ref": "#/definitions/Decimal256"
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
