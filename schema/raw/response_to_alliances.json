@@ -28,6 +28,7 @@
     "AllianceAsset": {
       "type": "object",
       "required": [
+        "consensus_cap",
         "consensus_weight",
         "denom",
         "last_reward_change_time",
@@ -41,6 +42,9 @@
         "total_validator_shares"
       ],
       "properties": {
+        "consensus_cap": {
+          "$ref": "#/definitions/Decimal256"
+        },
         "consensus_weight": {
           "$ref": "#/definitions/Decimal256"
         },

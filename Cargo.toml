@@ -1,6 +1,6 @@
 [package]
 name = "alliance"
-version = "1.0.0"
+version = "1.0.1"
 authors = ["matpb <mat@cryptech.dev>"]
 edition = "2021"
 

@@ -173,6 +173,7 @@ pub struct AllianceAsset {
     pub denom: String,
     pub reward_weight: Decimal256,
     pub consensus_weight: Decimal256,
+    pub consensus_cap: Decimal256,
     pub take_rate: Decimal256,
     pub total_tokens: Decimal256,
     pub total_validator_shares: Decimal256,
